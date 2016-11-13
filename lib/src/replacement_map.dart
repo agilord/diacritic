@@ -11,7 +11,7 @@ Map<int, List<int>> _multiUnit = {};
 
 void _register(String base, String accents) {
   if (base.codeUnits.length == 1) {
-    int baseUnit = base.codeUnits.first;
+    final int baseUnit = base.codeUnits.first;
     for (int unit in accents.codeUnits) {
       _singleUnit[unit] = baseUnit;
     }
@@ -22,16 +22,18 @@ void _register(String base, String accents) {
   }
 }
 
+/// Replaces list of code units to a simplified list.
+/// The length of the result list may differ from the source.
 List<int> replaceCodeUnits(List<int> codeUnits) {
   _initIfRequired();
-  var result = [];
+  final List<int> result = [];
   for (int original in codeUnits) {
-    int single = _singleUnit[original];
+    final int single = _singleUnit[original];
     if (single != null) {
       result.add(single);
       continue;
     }
-    List<int> multiple = _multiUnit[original];
+    final List<int> multiple = _multiUnit[original];
     if (multiple != null) {
       result.addAll(multiple);
       continue;
