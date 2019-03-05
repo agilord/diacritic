@@ -18,5 +18,9 @@ void main() {
       expect(
           removeDiacritics('ÁRVÍZTŰRŐ TÜKÖRFÚRÓGÉP'), 'ARVIZTURO TUKORFUROGEP');
     });
+
+    test('Multi-charcode characters', () {
+      expect(removeDiacritics('á ñ'), 'a n');
+    });
   });
 }

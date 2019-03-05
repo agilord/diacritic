@@ -1,3 +1,6 @@
+#   https://www.dartlang.org/guides/language/analysis-options
+include: package:pedantic/analysis_options.yaml
+
 # http://dart-lang.github.io/linter/lints/options/options.html
 linter:
   rules:
@@ -41,7 +44,6 @@ linter:
     - slash_for_doc_comments
     - sort_constructors_first
     - sort_unnamed_constructors_first
-    - super_goes_last
     - test_types_in_equals
     - throw_in_finally
     - type_annotate_public_apis
