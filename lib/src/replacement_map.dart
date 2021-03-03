@@ -11,12 +11,12 @@ Map<int, List<int>> _multiUnit = {};
 
 void _register(String base, String accents) {
   if (base.codeUnits.length == 1) {
-    final int baseUnit = base.codeUnits.first;
-    for (int unit in accents.codeUnits) {
+    final baseUnit = base.codeUnits.first;
+    for (var unit in accents.codeUnits) {
       _singleUnit[unit] = baseUnit;
     }
   } else {
-    for (int unit in accents.codeUnits) {
+    for (var unit in accents.codeUnits) {
       _multiUnit[unit] = base.codeUnits;
     }
   }
@@ -26,22 +26,22 @@ void _register(String base, String accents) {
 /// The length of the result list may differ from the source.
 List<int> replaceCodeUnits(List<int> codeUnits) {
   _initIfRequired();
-  final List<int> result = [];
-  for (int original in codeUnits) {
+  final result = <int>[];
+  for (var original in codeUnits) {
     // Combining Diacritical Marks in Unicode
     if (original >= 0x0300 && original <= 0x036F) {
       continue;
     }
 
     // single-unit replacements
-    final int single = _singleUnit[original];
+    final single = _singleUnit[original];
     if (single != null) {
       result.add(single);
       continue;
     }
 
     // multi-unit replacements
-    final List<int> multiple = _multiUnit[original];
+    final multiple = _multiUnit[original];
     if (multiple != null) {
       result.addAll(multiple);
       continue;

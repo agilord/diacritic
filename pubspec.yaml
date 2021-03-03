@@ -2,14 +2,14 @@ name: diacritic
 description: >
     Removes common accents and diacritical signs from a
     string by replacing them with an equivalent character.
-version: 0.1.1
+version: 0.1.3
 author: Istvan Soos <istvan.soos@agilord.com>
 
 homepage: https://github.com/agilord/diacritic
 
 environment:
-  sdk: '>=2.0.0 <3.0.0'
+  sdk: '>=2.12.0 <3.0.0'
 
 dev_dependencies:
-  pedantic: ^1.0.0
-  test: ^1.3.0
+  pedantic: ^1.11.0
+  test: ^1.16.5

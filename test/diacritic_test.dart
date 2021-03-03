@@ -7,7 +7,7 @@ import 'package:test/test.dart';
 void main() {
   group('Western languages.', () {
     test('English texts.', () {
-      final String quote = 'Insanity: doing the same thing over and '
+      final quote = 'Insanity: doing the same thing over and '
           'over again and expecting different results.';
       expect(removeDiacritics(quote), quote);
     });
