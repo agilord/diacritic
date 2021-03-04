@@ -3,7 +3,6 @@ description: >
     Removes common accents and diacritical signs from a
     string by replacing them with an equivalent character.
 version: 0.1.3
-author: Istvan Soos <istvan.soos@agilord.com>
 
 homepage: https://github.com/agilord/diacritic
 
