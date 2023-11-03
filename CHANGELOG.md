@@ -1,3 +1,7 @@
+# 0.1.4
+
+- Migrated to Dart 3.
+
 # 0.1.3
 
 - Migrated to null-safety ([#5](https://github.com/agilord/diacritic/pull/5) by [joaovvrodrigues](https://github.com/joaovvrodrigues)).
