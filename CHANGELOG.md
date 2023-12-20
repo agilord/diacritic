@@ -1,3 +1,7 @@
+# 0.1.5
+
+- Fix: removed lookalike mapping `\u043B` -> `n`.
+
 # 0.1.4
 
 - Migrated to Dart 3.
