@@ -2,13 +2,17 @@ name: diacritic
 description: >
     Removes common accents and diacritical signs from a
     string by replacing them with an equivalent character.
-version: 0.1.5
-
+version: 0.1.6
 homepage: https://github.com/agilord/diacritic
+topics:
+  - accents
+  - diacritical-signs
+  - characters
+  - text
 
 environment:
-  sdk: '>=2.19.0 <4.0.0'
+  sdk: '^3.0.0'
 
 dev_dependencies:
-  lints: ^3.0.0
+  lints: ^4.0.0
   test: ^1.16.5
